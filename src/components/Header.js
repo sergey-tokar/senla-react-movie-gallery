@@ -1,11 +1,11 @@
 import React from 'react';
 import homeIcon from '../images/home-icon.png';
 
-function Header() {
+export default function Header() {
     return (
         <div className="content-wrapper header-wrapper">
             <div className="home-link-button basic-button">
-                <a href="#" className="home-link">
+                <a href="" className="home-link">
                     <img className="home-link-icon" src={homeIcon} alt="Иконка домика"/>
                 </a>
             </div>
@@ -17,5 +17,3 @@ function Header() {
         </div>
 );
 }
-
-export default Header;
