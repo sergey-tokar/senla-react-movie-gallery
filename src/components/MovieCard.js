@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function MovieCard() {
+export default function MovieCard(props) {
     return (
         <li className="movie-card">
             <div className="movie-card__link"><img className="movie-card__poster"

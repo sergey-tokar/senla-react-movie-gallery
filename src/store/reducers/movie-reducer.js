@@ -6,11 +6,12 @@ const initialState = {
 }
 
 export default function movieReducer(state = initialState, action) {
+    console.log(action);
     switch (action.type) {
         case GET_MOVIES:
             return {
                 ...state,
-                data: [action.payload],
+                data: [...action.payload],
             };
         case MOVIES_IS_LOADED:
             return {
