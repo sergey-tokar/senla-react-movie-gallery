@@ -5,15 +5,15 @@ import {getMovies} from "../store/actions/actions";
 
 export default function MovieList() {
     const dispatch = useDispatch();
-    const {data, isLoaded} = useSelector((state) => state);
+    const {data, isLoaded} = useSelector((state) => state.movies);
     useEffect(() => {
         dispatch(getMovies());
     }, [dispatch]);
     return (
         <ul className='movie-list'>
             {isLoaded ? data.map((movie) => (
-                    <MovieCard key={movie.id} {...movie}/>
-                )) : <p>Loading</p>
+                <MovieCard key={movie.id} {...movie}/>
+            )) : <p>Loading</p>
             }
         </ul>
     );
