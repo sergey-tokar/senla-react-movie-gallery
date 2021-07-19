@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import changePage, {getMovies} from "../store/actions/get-data-from-server-actions";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Pagination() {
     const dispatch = useDispatch();
@@ -18,7 +19,7 @@ export default function Pagination() {
             {
                 pages.map((i) => {
                     return (
-                        <li className="pagination-item">
+                        <li key={uuidv4()} className="pagination-item">
                             <button onClick={handleClick}
                                     className={`pagination-item__button basic-button ${page === i.toString() ? 'selected' : ''}`}
                                     data-page={i}>{i}</button>
