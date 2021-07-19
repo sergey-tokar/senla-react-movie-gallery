@@ -190,6 +190,10 @@ body {
   text-align: center;
 }
 
+.movie-full-card {
+  height: 850px;
+}
+
 .movie-full-card__poster {
   width: 300px;
   float: left;
@@ -212,24 +216,10 @@ body {
   margin-right: 10px;
 }
 
-.loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-}
-
-.loader {
-  display: block;
-  border: 16px solid darkgray;
-  border-top: 16px solid black;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.error {
+  margin: 50px auto;
+  color: red;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
 }
