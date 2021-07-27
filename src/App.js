@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {Route, Switch} from "react-router-dom";
 import MoviesPage from "./components/MoviesPage";
-import MovieList from "./components/MovieList";
+import FullMovieCard from "./components/FullMovieCard";
 
 export default function App() {
     return (
@@ -15,7 +15,7 @@ export default function App() {
                     <MoviesPage/>
                 </Route>
                 <Route path="/:movieId" exact>
-                    <MovieList/>
+                    <FullMovieCard/>
                 </Route>
             </Switch>
             <Footer/>

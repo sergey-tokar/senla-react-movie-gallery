@@ -6,9 +6,9 @@ import Genres from "./Genres";
 
 export default function FullMovieCard() {
     const params = useParams();
-    const {moviesArray, genresArray} = useSelector((state) => state.movies);
+    const {movies, genresArray} = useSelector((state) => state.movies);
 
-    const movie = moviesArray.find((movie) => movie.id === Number(params.movieId));
+    const movie = movies.find((movie) => movie.id === Number(params.movieId));
     const genres = genresArray.filter((genre) =>
         movie.genre_ids.find(movieGenreId => movieGenreId === genre.id)
     );
