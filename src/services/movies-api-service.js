@@ -16,5 +16,12 @@ export default class MoviesApiService {
             })
     }
 
+    static getMovie(movieId) {
+        return fetch(ApiService.movieUrl(movieId))
+            .then((response) => {
+                return response.json();
+            })
+    }
+
 }
 

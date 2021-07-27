@@ -1,18 +1,8 @@
 import React from "react";
-import {useParams} from "react-router-dom";
-import {useSelector} from "react-redux";
 import noPosterPath from '../images/no-poster.png';
 import Genres from "./Genres";
 
-export default function FullMovieCard() {
-    const params = useParams();
-    const {movies, genresArray} = useSelector((state) => state.movies);
-
-    const movie = movies.find((movie) => movie.id === Number(params.movieId));
-    const genres = genresArray.filter((genre) =>
-        movie.genre_ids.find(movieGenreId => movieGenreId === genre.id)
-    );
-
+export default function FullMovieCard({movie, genres}) {
     return (
         <div className="movie-full-card"><img className="movie-full-card__poster"
                                               src={movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : noPosterPath}

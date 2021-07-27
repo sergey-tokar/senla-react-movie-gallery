@@ -2,25 +2,25 @@ import {
     DATA_LOADING,
     GET_MOVIES_SUCCESS,
     LOADING_FAILURE,
-    GET_GENRES_SUCCESS, CHANGE_MOVIES_PAGE
+    GET_GENRES_SUCCESS,
+    CHANGE_MOVIES_PAGE,
+    CHANGE_MOVIES_SORT,
+    GET_MOVIE_SUCCESS
 } from "../constants/constants";
 
 const initialState = {
     isLoading: false,
     page: 1,
+    sortBy: 'vote_average.desc',
     totalPages: 0,
     movies: [],
     genresArray: [],
     error: null,
+    movie: null,
 }
 
 export default function movieReducer(state = initialState, action) {
     switch (action.type) {
-        case CHANGE_MOVIES_PAGE:
-            return {
-                ...state,
-                page: action.payload,
-            }
         case DATA_LOADING:
             return {
                 ...state,
@@ -44,6 +44,21 @@ export default function movieReducer(state = initialState, action) {
                 ...state,
                 error: action.payload,
             };
+        case CHANGE_MOVIES_PAGE:
+            return {
+                ...state,
+                page: action.payload,
+            };
+        case CHANGE_MOVIES_SORT:
+            return {
+                ...state,
+                sortBy: action.payload,
+            }
+        case GET_MOVIE_SUCCESS:
+            return {
+                ...state,
+                movie: action.payload,
+            }
         default:
             return state;
     }

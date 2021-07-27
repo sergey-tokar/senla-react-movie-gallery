@@ -1,225 +1,246 @@
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./fonts/roboto-400.woff2') format('woff2'), url('./fonts/roboto-400.woff') format('woff');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/roboto-400.woff2') format('woff2'), url('./fonts/roboto-400.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('./fonts/roboto-700.woff2') format('woff2'), url('./fonts/roboto-700.woff') format('woff');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/roboto-700.woff2') format('woff2'), url('./fonts/roboto-700.woff') format('woff');
 }
 
 body {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .content-wrapper {
-  width: 70%;
-  min-width: 1024px;
-  margin: 30px auto;
+    width: 70%;
+    min-width: 1024px;
+    margin: 30px auto;
 }
 
 .header-wrapper {
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
 }
 
 .home-link-icon {
-  max-width: 25px;
+    max-width: 25px;
 }
 
 .home-link-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .basic-button {
-  border: 2px solid black;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  cursor: pointer;
+    border: 2px solid black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 .basic-button:hover {
-  background-color: #e3e3e3;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.8);
+    background-color: #e3e3e3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.8);
 }
 
 .basic-button:active {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-  background: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    background: none;
 }
 
 .login-wrapper {
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
 }
 
 .login {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 .sign-in-button {
-  box-sizing: border-box;
-  background: none;
-  border-radius: 0;
+    box-sizing: border-box;
+    background: none;
+    border-radius: 0;
 }
 
 .movie-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
-  grid-gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    grid-gap: 30px;
 }
 
 .movie-card {
-  position: relative;
-  text-align: center;
-  max-width: 200px;
-  overflow: hidden;
+    position: relative;
+    text-align: center;
+    max-width: 200px;
+    overflow: hidden;
 }
 
 .movie-card:hover {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
 
 }
 
 .movie-card__link {
-  display: block;
-  text-decoration: none;
-  color: black;
+    display: block;
+    text-decoration: none;
+    color: black;
 }
 
 .movie-card__poster {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .movie-card__title {
-  margin: 10px 0;
-  font-weight: 700;
-  font-size: 18px;
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .movie-card__link:hover {
-  text-decoration: underline;
-  text-underline-position: under;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .movie-card__realise-date,
 .movie-card__vote-average {
-  display: none;
+    display: none;
 }
 
 .movie-card__realise-date {
-  top: 10px;
+    top: 10px;
 }
 
 .movie-card__vote-average {
-  top: 265px;
+    top: 265px;
 }
 
 .movie-card:hover > .movie-card__realise-date,
 .movie-card:hover > .movie-card__vote-average {
-  width: 100%;
-  height: 25px;
-  display: block;
-  position: absolute;
-  margin: 0;
-  line-height: 25px;
-  background-color: white;
-  opacity: 0.8;
+    width: 100%;
+    height: 25px;
+    display: block;
+    position: absolute;
+    margin: 0;
+    line-height: 25px;
+    background-color: white;
+    opacity: 0.8;
 }
 
 .pagination {
-  display: flex;
-  justify-content: space-between;
-  width: 500px;
-  margin: 30px auto;
-  list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 30px auto;
+    list-style: none;
 }
 
 .pagination-item__button {
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
-  padding: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0;
 }
 
 .pagination-item__button.selected {
-  background-color: black;
-  color: white;
-  font-weight: 700;
+    background-color: black;
+    color: white;
+    font-weight: 700;
 }
 
 .pagination-item__button:disabled {
-  background-color: lightgray;
-  border: none;
+    background-color: lightgray;
+    border: none;
 }
 
 .pagination-item__button:disabled:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: none;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .footer-info {
-  color: darkgray;
-  font-size: 14px;
-  text-align: center;
+    color: darkgray;
+    font-size: 14px;
+    text-align: center;
 }
 
 .movie-full-card {
-  height: 850px;
+    height: 850px;
 }
 
 .movie-full-card__poster {
-  width: 300px;
-  float: left;
-  margin: 0 40px 20px 0;
+    width: 300px;
+    float: left;
+    margin: 0 40px 20px 0;
 }
 
 .movie-full-card__title {
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
 }
 
 .movie-full-card__genres {
-  list-style: none;
-  display: flex;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    padding: 0;
 }
 
 .movie-genre {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .error {
-  margin: 50px auto;
-  color: red;
-  font-weight: 700;
-  font-size: 24px;
-  text-align: center;
+    margin: 50px auto;
+    color: red;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.sorting-movies {
+    width: 385px;
+    margin: 50px auto;
+}
+
+#sorting-movies {
+    margin-left: 10px;
+}
+
+.not-found-page {
+    width: 600px;
+    margin: 50px auto;
+}
+
+.not-found-title {
+    margin: 100px 0;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
 }

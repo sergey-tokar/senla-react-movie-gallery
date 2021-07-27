@@ -21,7 +21,7 @@ export default function Pagination({page, totalPages, onChange}) {
             pagesArray.push('...', totalPages);
     }
 
-    const handleClick = (event) => {
+    const changePage = (event) => {
         let currentPage = event.target.getAttribute('data-page');
         switch (currentPage) {
             case 'next':
@@ -39,7 +39,7 @@ export default function Pagination({page, totalPages, onChange}) {
     return (
         <ul className="pagination">
             <li className="pagination-item">
-                <button onClick={handleClick} className="pagination-item__button basic-button previous-button"
+                <button onClick={changePage} className="pagination-item__button basic-button previous-button"
                         id="previous-button"
                         data-page="previous"
                         disabled={Number(page) === 1}>←
@@ -56,7 +56,7 @@ export default function Pagination({page, totalPages, onChange}) {
                     }
                     return (
                         <li key={uuidv4()} className="pagination-item">
-                            <button onClick={handleClick}
+                            <button onClick={changePage}
                                     className={`pagination-item__button basic-button ${page === paginationPage ? 'selected' : ''}`}
                                     data-page={paginationPage}>{paginationPage}</button>
                         </li>
@@ -64,7 +64,7 @@ export default function Pagination({page, totalPages, onChange}) {
                 })
             }
             <li className="pagination-item">
-                <button onClick={handleClick} className="pagination-item__button basic-button next-button"
+                <button onClick={changePage} className="pagination-item__button basic-button next-button"
                         id="next-button"
                         data-page="next"
                         disabled={Number(page) === totalPages}>→
