@@ -2,22 +2,20 @@ import './App.css';
 import React from 'react';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import MovieList from "./components/MovieList";
-import Pagination from "./components/Pagination";
-import FullMovieCard from "./components/FullMovieCard";
 import {Route, Switch} from "react-router-dom";
+import MoviesPage from "./components/MoviesPage";
+import MovieList from "./components/MovieList";
 
-function App() {
+export default function App() {
     return (
         <div className='content-wrapper'>
             <Header/>
             <Switch>
                 <Route path="/" exact>
-                    <MovieList/>
-                    <Pagination/>
+                    <MoviesPage/>
                 </Route>
                 <Route path="/:movieId" exact>
-                    <FullMovieCard/>
+                    <MovieList/>
                 </Route>
             </Switch>
             <Footer/>
@@ -25,5 +23,3 @@ function App() {
 
     );
 }
-
-export default App;

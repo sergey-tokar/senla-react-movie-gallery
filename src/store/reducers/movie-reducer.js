@@ -1,15 +1,15 @@
 import {
-    GET_DATA_STARTED,
+    DATA_LOADING,
     GET_MOVIES_SUCCESS,
-    GET_DATA_FAILURE,
+    LOADING_FAILURE,
     GET_GENRES_SUCCESS, CHANGE_MOVIES_PAGE
 } from "../constants/constants";
 
 const initialState = {
     isLoading: false,
-    page: '1',
-    totalPages:'',
-    moviesArray: [],
+    page: 1,
+    totalPages: 0,
+    movies: [],
     genresArray: [],
     error: null,
 }
@@ -21,7 +21,7 @@ export default function movieReducer(state = initialState, action) {
                 ...state,
                 page: action.payload,
             }
-        case GET_DATA_STARTED:
+        case DATA_LOADING:
             return {
                 ...state,
                 isLoading: action.payload,
@@ -29,8 +29,8 @@ export default function movieReducer(state = initialState, action) {
         case GET_MOVIES_SUCCESS:
             return {
                 ...state,
-                moviesArray: [...action.payload.results],
-                totalPages: action.payload.total_pages,
+                movies: [...action.payload.results],
+                totalPages: action.payload.totalPages,
                 error: null,
             };
         case GET_GENRES_SUCCESS:
@@ -39,7 +39,7 @@ export default function movieReducer(state = initialState, action) {
                 genresArray: [...action.payload],
                 error: null,
             };
-        case GET_DATA_FAILURE:
+        case LOADING_FAILURE:
             return {
                 ...state,
                 error: action.payload,
