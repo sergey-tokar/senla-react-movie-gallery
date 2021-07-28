@@ -15,4 +15,5 @@ Features realized in project:
 * routing (including not found page cases)
 * user authorization
 * user registration 
+* special view for admin
 
