@@ -5,7 +5,7 @@ import {
     GET_GENRES_SUCCESS,
     CHANGE_MOVIES_PAGE,
     CHANGE_MOVIES_SORT,
-    GET_MOVIE_SUCCESS
+    GET_MOVIE_SUCCESS, CLEAR_MOVIE
 } from "../constants/constants";
 
 const initialState = {
@@ -58,6 +58,11 @@ export default function movieReducer(state = initialState, action) {
             return {
                 ...state,
                 movie: action.payload,
+            }
+        case CLEAR_MOVIE:
+            return {
+                ...state,
+                movie: null,
             }
         default:
             return state;

@@ -4,7 +4,7 @@ import {
     LOADING_FAILURE,
     GET_GENRES_SUCCESS,
     CHANGE_MOVIES_PAGE,
-    CHANGE_MOVIES_SORT, GET_MOVIE_SUCCESS,
+    CHANGE_MOVIES_SORT, GET_MOVIE_SUCCESS, CLEAR_MOVIE,
 } from "../constants/constants";
 
 import MoviesApiService from "../../services/movies-api-service";
@@ -27,6 +27,7 @@ export const loadMovies = () => async (dispatch, getState) => {
 
 export const loadMovie = (movieId) => async (dispatch) =>{
     dispatch(dataLoading(true));
+    dispatch(clearMovie());
     try {
         const movie = await MoviesApiService.getMovie(movieId);
         if (movie.id) {
@@ -88,5 +89,11 @@ function movieSuccess(movie) {
     return {
         type: GET_MOVIE_SUCCESS,
         payload: movie,
+    }
+}
+
+function clearMovie() {
+    return {
+        type: CLEAR_MOVIE,
     }
 }
