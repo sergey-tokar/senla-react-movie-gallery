@@ -1,6 +1,6 @@
-#senla-react-homework-final-project
+# senla-react-homework-final-project
 
-##Movie gallery application
+## Movie gallery application
 
 SENLA React courses JS final project, training React skills.
 
