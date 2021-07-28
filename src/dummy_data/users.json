@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "login": "Admin",
+      "name": "Administrator",
+      "surname": "Adminsky",
+      "password": "admin123",
+      "email": "admin@admin.ru"
+    },
+    {
+      "login": "Serg",
+      "name": "Sergey",
+      "surname": "Tokar",
+      "password": "123456",
+      "email": "serg@serg.ru"
+    }
+  ]
+}

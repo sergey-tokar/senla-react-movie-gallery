@@ -14,7 +14,7 @@ export const loadMovies = () => async (dispatch, getState) => {
     try {
         const movies = await MoviesApiService.getMovies({
             page: getState().movies.page,
-            sortBy: getState().movies.sortBy
+            sortBy: getState().movies.sortBy,
         });
         dispatch(moviesSuccess(movies));
         const genres = (await MoviesApiService.getGenres()).genres;

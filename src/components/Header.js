@@ -1,6 +1,7 @@
 import React from 'react';
 import homeIcon from '../images/home-icon.png';
 import {Link} from "react-router-dom";
+import LogIn from "./LogIn";
 
 export default function Header() {
     return (
@@ -12,10 +13,8 @@ export default function Header() {
                 </div>
             </Link>
 
-            <div className="login-wrapper">
-                <p className="login">Login name</p>
-                <button className="sign-in-button basic-button">Sign IN / Sign UP</button>
-            </div>
+            <LogIn/>
+
         </div>
     );
 }

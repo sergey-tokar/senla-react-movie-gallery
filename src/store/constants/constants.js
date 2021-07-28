@@ -5,3 +5,7 @@ export const LOADING_FAILURE = 'LOADING_FAILURE';
 export const CHANGE_MOVIES_PAGE = 'CHANGE_MOVIES_PAGE';
 export const CHANGE_MOVIES_SORT = 'CHANGE_MOVIES_SORT';
 export const GET_MOVIE_SUCCESS = 'GET_MOVIE_SUCCESS';
+export const LOG_IN = 'LOG_IN';
+export const LOG_OUT = 'LOG_OUT';
+export const ADD_NEW_USER = 'ADD_NEW_USER';
+export const ADMIN_LOG_IN = 'ADMIN_LOG_IN';

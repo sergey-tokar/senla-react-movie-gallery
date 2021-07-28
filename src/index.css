@@ -47,10 +47,15 @@ body {
 }
 
 .basic-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid black;
+    background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     cursor: pointer;
+    padding: 10px;
 }
 
 .basic-button:hover {
@@ -74,9 +79,12 @@ body {
 }
 
 .sign-in-button {
+    width: 80px;
     box-sizing: border-box;
     background: none;
     border-radius: 0;
+    text-decoration: none;
+    color: black;
 }
 
 .movie-list {
@@ -243,4 +251,40 @@ body {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+}
+
+.form {
+    width: 300px;
+    margin: 50px auto;
+}
+
+.form__item {
+    width: 300px;
+    height: 35px;
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.form-error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.login-form-error {
+    margin-top: 20px;
+}
+
+.registration__button, .form__button {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.registration__button {
+    color: white;
+    background-color: black;
+}
+
+.registration__button:hover {
+    background-color: #4e4d4d;
 }
