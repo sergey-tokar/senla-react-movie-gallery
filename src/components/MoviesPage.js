@@ -9,6 +9,7 @@ import SortingMovies from "./SortingMovies";
 export default function MoviesPage() {
     const dispatch = useDispatch();
     const {movies, isLoading, error, page, sortBy, totalPages} = useSelector((state) => state.movies);
+    const {isAdmin} = useSelector(state => state.authorization);
 
     useEffect(() => {
         dispatch(loadMovies());
@@ -30,6 +31,7 @@ export default function MoviesPage() {
                 sortBy={sortBy}
                 onChange={(sortBy) => dispatch(changeSortBy(sortBy))}
             />
+            <button className={`add-movie basic-button ${isAdmin ? '' : 'hidden'}`}/>
             <MovieList movies={movies}/>
             <Pagination
                 page={page}

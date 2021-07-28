@@ -3,7 +3,7 @@ import {ADD_NEW_USER, ADMIN_LOG_IN, LOG_IN, LOG_OUT} from "../constants/constant
 export const tryLogIn = (loginData) => (dispatch, getState) => {
     const users = getState().authorization.users;
     const currentUser = users.find(user => user.email.toLowerCase() === loginData.email.toLowerCase() && user.password === loginData.password);
-    if (currentUser && currentUser.login === 'admin') {
+    if (currentUser && currentUser.login === 'Admin') {
         dispatch(adminLogIn(currentUser));
     } else if (currentUser) {
         dispatch(logIn(currentUser))

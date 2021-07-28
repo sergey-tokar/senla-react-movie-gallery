@@ -4,10 +4,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {Route, Switch} from "react-router-dom";
 import MoviesPage from "./components/MoviesPage";
-import NotFoundPage from "./components/NotFoundPage";
-import MoviePage from "./components/MoviePage";
 import LogInForm from "./components/LogInForm";
 import RegistrationForm from "./components/RegistrationForm";
+import MoviePage from "./components/MoviePage";
+import NotFoundPage from "./components/NotFoundPage";
 
 export default function App() {
     return (

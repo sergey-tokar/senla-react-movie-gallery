@@ -32,6 +32,7 @@ export default function authorizationReducer(state = initialState, action) {
             return {
                 ...state,
                 isAuthorized: false,
+                isAdmin: false,
                 currentUser: '',
             }
         case ADD_NEW_USER:
