@@ -4,7 +4,7 @@
 
 SENLA React courses JS final project, training React skills.
 
-**Netlify link** - [https://senla-react-movie-gallery.netlify.app](https://senla-react-movie-gallery.netlify.app)
+**Netlify link** - [https://react-movie-gallery-senla-courses.netlify.app](https://react-movie-gallery-senla-courses.netlify.app)
 
 
 Features realized in project:
